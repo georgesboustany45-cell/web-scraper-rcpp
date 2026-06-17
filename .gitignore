@@ -1,0 +1,46 @@
+# Compiled objects
+*.o
+*.so
+*.dylib
+*.dll
+
+# R build artifacts
+src/*.o
+src/*.so
+src/RcppExports.cpp
+src/RcppExports.h
+src-x64/
+src-i386/
+
+# R package files
+*.Rcheck/
+*.tar.gz
+
+# IDE
+.Rproj.user/
+.Rproject
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
+
+# Local environment
+.Rhistory
+.Rdata
+*.swp
+*.swo
+*~
+
+# Test coverage
+coverage/
+.coverage
+
+# Documentation
+man/*.Rd
+docs/

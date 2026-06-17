@@ -1,0 +1,27 @@
+Package: webScraperRcpp
+Title: High-Performance Web Scraper with R and C++
+Version: 0.1.0
+Authors@R: 
+    person("George", "Boustany", , "george@example.com", role = c("aut", "cre"))
+Description: A robust web scraper combining R for interface and C++ via Rcpp 
+    for high-performance data parsing, memory management, and network requests. 
+    Features include dynamic content handling, retry logic, rate limiting, and 
+    data export to R data.frames.
+License: MIT
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+SystemRequirements: C++17, libcurl
+LinkingTo: Rcpp
+Imports: 
+    Rcpp (>= 1.0.9),
+    tibble,
+    dplyr,
+    rlang,
+    jsonlite,
+    httr2
+Suggests: 
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

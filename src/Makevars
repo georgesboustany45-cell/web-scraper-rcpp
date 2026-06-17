@@ -1,0 +1,18 @@
+# Makevars for libcurl linking
+
+# On macOS, libcurl is usually in system paths
+ifeq ($(UNAME), Darwin)
+  PKG_CPPFLAGS = -I/usr/local/include
+  PKG_LIBS = -L/usr/local/lib -lcurl
+endif
+
+# On Linux
+ifeq ($(UNAME), Linux)
+  PKG_CPPFLAGS = $(shell pkg-config --cflags libcurl)
+  PKG_LIBS = $(shell pkg-config --libs libcurl)
+endif
+
+# On Windows, assume Rtools provides libcurl
+ifeq ($(OS), Windows_NT)
+  PKG_LIBS = -lcurl
+endif
